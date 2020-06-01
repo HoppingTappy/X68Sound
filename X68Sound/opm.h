@@ -1646,7 +1646,7 @@ inline int Opm::WaveAndTimerStart() {
 	wfx.cbSize = 0;
 
 	timer_start_flag = 0;
-	if ((ret=waveOutOpen(&hwo, WAVE_MAPPER, &wfx, (DWORD)waveOutProc, NULL, CALLBACK_FUNCTION ))
+	if ((ret=waveOutOpen(&hwo, WAVE_MAPPER, &wfx, (DWORD_PTR)waveOutProc, NULL, CALLBACK_FUNCTION ))
 		!= MMSYSERR_NOERROR) {
 		hwo = NULL;
 		Free();
